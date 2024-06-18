@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>advanced function</title>
+  
+  <link rel="stylesheet" href="./function-object.css">
+</head>
+<body>
+
+  <h1>Rock Paper Scissors</h1>
+
+  <button class="move-btn js-rock">
+    <img src="./images/rock-emoji.png" alt="" id="img-icon"></button>
+
+  <button class="move-btn js-paper" >
+  <img src="./images/paper-emoji.png" alt="" id="img-icon"></button>
+
+
+  <button class="move-btn js-scissors" >
+  <img src="./images/scissors-emoji.png" alt="" id="img-icon"></button>
+
+  <p class="my-result result"></p>
+  <p class="my-move"></p>
+
+  <p class="my"></p>
+
+  <button id="reset-btn" class="js-reset">Reset Score</button>
+
+  <button class="auto-btn js-auto">Auto play</button>
+
+
+  <script>
+    // funtions are also values which means it can be saved in a variable just like a number
+    const function1 = function greeting() {
+      console.log('my name');
+  
+    };
+    console.log(function1);
+    console.log(typeof function1);
+    function1();
+
+    // in JS, as long as there is a way to access a function, the function name is not needed
+    // it called an anonymous function (a function without a name)
+
+    const function2 = function () {
+      console.log('my name');
+  
+    };  
+
+    // since functions are values and we can pass a value into a function therefore we can also pass a function into another function... the function that we pass in is called a callback function or a callback
+
+    function run(param) {
+      param();
+    }
+    run(function() {
+      console.log('hello my nigga');
+    });
+
+    /*below are practical examples using some features of JS*/
+
+    /*  1. setTimeout()
+        setTimeout is a JS inbuilt function.. it allows us to run a function in he future
+
+        setTimeout take two parameters, a function we want to run in the future and how long to wait before running this function,
+
+        setTimeout is a Asynchronous code. i.e: the next line of code will run before the timeout reaches, it doesnt block the code next code untill the time out reaches
+    */
+
+    setTimeout(function() {
+      console.log('timeout');
+    }, 7000);
+
+    console.log('hello my bitches');
+    
+    /* 2. setInterval()
+        it also take two parameters as of setTimeout
+        it also has thesame behavior as setTimeout
+    */
+    
+    setInterval(function() {
+      console.log('no more bullshit')
+    }, 5000);
+
+    console.log('no more games');
+  </script>
+
+  <!-- we used the topic to add more features to our rock papper sciccors project -->
+  <script src="./advanced-funtion.js"></script>
+</body>
+</html>
